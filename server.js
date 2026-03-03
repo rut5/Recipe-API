@@ -30,3 +30,7 @@ app.get('/recipes/:id', (req, res) => {
     if (!recipe) return res.status(404).send({ message: "Recipe not found" });
     res.json(recipe);
 });
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
